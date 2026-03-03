@@ -1,119 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Riberi Erik | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- Particles Background -->
   <div id="particles-js"></div>
 
-  <!-- Header -->
   <header class="header">
-    <div class="logo">Riberi Erik</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="wrapper">
+      <div class="logo">Riberi Erik</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>I'm <span id="typed"></span></h1>
-    <p>Frontend Developer & Creative Designer</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I build modern, responsive websites with clean design and smooth animations.
-      Passionate about minimalism and elegant user interfaces.
-    </p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-
-    <div class="project-grid">
-      <div class="card">
-        <h3>Project One</h3>
-        <p>Modern landing page with animations.</p>
+  <main class="wrapper">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>I'm <span id="typed"></span></h1>
+        <p>Frontend Developer & Creative Designer</p>
+        <a href="#projects" class="btn">View My Work</a>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Project Two</h3>
-        <p>Dark theme portfolio concept.</p>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>I build modern, responsive websites with clean design and smooth animations. Passionate about minimalism and elegant user interfaces.</p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="card">
+          <h3>Project One</h3>
+          <p>Modern landing page with animations.</p>
+        </div>
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>Dark theme portfolio concept.</p>
+        </div>
+        <div class="card">
+          <h3>Project Three</h3>
+          <p>Creative UI experiment.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Project Three</h3>
-        <p>Creative UI experiment.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Let's build something amazing together.</p>
-    <a href="#" class="btn-outline">Send Message</a>
-  </section>
+    <section id="contact" class="section contact-section">
+      <h2>Contact</h2>
+      <p>Let's build something amazing together.</p>
+      <a href="mailto:tu-correo@ejemplo.com" class="btn outline">Send Message</a>
+    </section>
+  </main>
 
   <footer>
     <p>© 2026 Riberi Erik. All rights reserved.</p>
   </footer>
 
-  <!-- Typing Effect -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      // Efecto de tipeo
       const text = "Riberi Erik";
       let index = 0;
-
       function typeEffect() {
         if (index < text.length) {
           document.getElementById("typed").innerHTML += text.charAt(index);
           index++;
-          setTimeout(typeEffect, 100);
+          setTimeout(typeEffect, 150);
         }
       }
-
       typeEffect();
+
+      // Partículas
+      tsParticles.load("particles-js", {
+        fullScreen: { enable: true, zIndex: -1 }, // Esto asegura que esté al fondo
+        particles: {
+          number: { value: 80 },
+          color: { value: "#ffffff" },
+          links: { enable: true, color: "#ffffff", opacity: 0.2 },
+          move: { enable: true, speed: 1 }
+        }
+      });
     });
   </script>
-
-  <!-- Particles -->
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  tsParticles.load("particles-js", {
-    particles: {
-      number: { value: 70 },
-      color: { value: "#9be3c6" },
-      shape: { type: "circle" },
-      opacity: { value: 0.4 },
-      size: { value: 3 },
-      move: { enable: true, speed: 1 },
-      links: {
-        enable: true,
-        distance: 140,
-        color: "#9be3c6",
-        opacity: 0.3,
-        width: 1
-      }
-    }
-  });
-});
-</script>
-
 </body>
 </html>
