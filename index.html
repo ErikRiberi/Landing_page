@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Riberi Erik | Portfolio</title>
+  <title>Riberi Erik | Frontend Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,113 +12,63 @@
 
   <header class="header">
     <div class="wrapper">
-      <div class="logo">Riberi Erik</div>
+      <div class="logo">RIBERI<span>ERIK</span></div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Sobre Mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrapper">
-        <div class="hero-text">
-          <h1>I'm <span id="typed"></span></h1>
-          <p>Frontend Developer & Creative Designer</p>
-          <a href="#projects" class="btn">View My Work</a>
+    <section class="hero wrapper">
+      <div class="hero-content">
+        <h1>Hola, soy <span id="typed"></span></h1>
+        <p class="subtitle">Frontend Developer & Creative Designer</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">Ver Proyectos</a>
+          <a href="#contact" class="btn outline">Contactar</a>
         </div>
       </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="wrapper">
-        <h2>About Me</h2>
-        <p>
-          I build modern, responsive websites with clean design and smooth animations. 
-          Passionate about minimalism and elegant user interfaces.
-        </p>
+      <div class="hero-image">
+        <img src="images/perfil.jpg" alt="Riberi Erik">
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="wrapper">
-        <h2>Projects</h2>
-        <div class="project-grid">
-          
-          <div class="card">
-            <h3>Project One</h3>
-            <p>Modern landing page with animations.</p>
-          </div>
+    <section id="about" class="about-section wrapper">
+      <h2>Sobre Mí</h2>
+      <p>Construyo sitios web modernos y responsivos con un enfoque en el diseño limpio y animaciones fluidas. Me apasiona el minimalismo y crear interfaces de usuario elegantes que ofrezcan grandes experiencias.</p>
+    </section>
 
-          <div class="card">
-            <h3>Project Two</h3>
-            <p>Dark theme portfolio concept.</p>
-          </div>
-
-          <div class="card">
-            <h3>Project Three</h3>
-            <p>Creative UI experiment.</p>
-          </div>
-
+    <section id="projects" class="projects-section wrapper">
+      <h2>Mis Proyectos</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Proyecto Uno</h3>
+          <p>Landing page moderna con animaciones interactivas.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="wrapper">
-        <h2>Contact</h2>
-        <p>Let's build something amazing together.</p>
-        <a href="mailto:tu-email@ejemplo.com" class="btn-outline">Send Message</a>
+        <div class="project-card">
+          <h3>Proyecto Dos</h3>
+          <p>Concepto de portafolio con temática oscura.</p>
+        </div>
+        <div class="project-card">
+          <h3>Proyecto Tres</h3>
+          <p>Experimento de UI creativa y minimalista.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="wrapper">
-      <p>© 2026 Riberi Erik. All rights reserved.</p>
+      <p>&copy; 2026 Riberi Erik. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // 1. Efecto de Escritura (Typed Effect)
-      const text = "Riberi Erik";
-      let index = 0;
-      const typedElement = document.getElementById("typed");
-
-      function typeEffect() {
-        if (index < text.length) {
-          typedElement.innerHTML += text.charAt(index);
-          index++;
-          setTimeout(typeEffect, 150);
-        }
-      }
-      typeEffect();
-
-      // 2. Configuración de Partículas
-      tsParticles.load("particles-js", {
-        fpsLimit: 60,
-        particles: {
-          number: { value: 60 },
-          color: { value: "#38bdf8" }, // Color celeste que combina con el CSS
-          links: {
-            enable: true,
-            distance: 150,
-            color: "#38bdf8",
-            opacity: 0.2,
-            width: 1
-          },
-          move: { enable: true, speed: 1.5 },
-          size: { value: 2 }
-        }
-      });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
