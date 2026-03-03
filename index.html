@@ -9,6 +9,9 @@
 
 <body>
 
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
   <!-- Header -->
   <header class="header">
     <div class="logo">Riberi Erik</div>
@@ -23,55 +26,98 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Hello, I'm <span>Riberi Erik</span></h1>
-      <p>Frontend Developer & Creative Designer</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
+    <h1>I'm <span id="typed"></span></h1>
+    <p>Frontend Developer & Creative Designer</p>
+    <a href="#projects" class="btn">View My Work</a>
   </section>
 
   <!-- About -->
-  <section id="about" class="about section">
+  <section id="about" class="section">
     <h2>About Me</h2>
     <p>
-      I build modern, responsive websites with clean design and smooth user experiences.
-      Passionate about minimalism, performance, and elegant code.
+      I build modern, responsive websites with clean design and smooth animations.
+      Passionate about minimalism and elegant user interfaces.
     </p>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="projects section">
+  <section id="projects" class="section">
     <h2>Projects</h2>
 
     <div class="project-grid">
       <div class="card">
         <h3>Project One</h3>
-        <p>Modern landing page with animations and responsive design.</p>
+        <p>Modern landing page with animations.</p>
       </div>
 
       <div class="card">
         <h3>Project Two</h3>
-        <p>Portfolio website built with clean UI and dark theme.</p>
+        <p>Dark theme portfolio concept.</p>
       </div>
 
       <div class="card">
         <h3>Project Three</h3>
-        <p>Creative UI concept with smooth transitions and effects.</p>
+        <p>Creative UI experiment.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact section">
+  <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Let’s work together.</p>
+    <p>Let's build something amazing together.</p>
     <a href="#" class="btn-outline">Send Message</a>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2026 Riberi Erik. All rights reserved.</p>
   </footer>
+
+  <!-- Typing Effect Script -->
+  <script>
+    const text = "Riberi Erik";
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById("typed").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    typeEffect();
+  </script>
+
+  <!-- Particles Library -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+  <!-- Particles Config -->
+  <script>
+    tsParticles.load("particles-js", {
+      background: {
+        color: "#0f1a17"
+      },
+      particles: {
+        number: { value: 80 },
+        color: { value: "#9be3c6" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        move: {
+          enable: true,
+          speed: 1
+        },
+        links: {
+          enable: true,
+          distance: 150,
+          color: "#9be3c6",
+          opacity: 0.4,
+          width: 1
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
