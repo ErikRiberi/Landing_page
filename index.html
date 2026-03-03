@@ -23,75 +23,102 @@
     </div>
   </header>
 
-  <main class="wrapper">
+  <main>
     <section class="hero">
-      <div class="hero-text">
-        <h1>I'm <span id="typed"></span></h1>
-        <p>Frontend Developer & Creative Designer</p>
-        <a href="#projects" class="btn">View My Work</a>
+      <div class="wrapper">
+        <div class="hero-text">
+          <h1>I'm <span id="typed"></span></h1>
+          <p>Frontend Developer & Creative Designer</p>
+          <a href="#projects" class="btn">View My Work</a>
+        </div>
       </div>
     </section>
 
     <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>I build modern, responsive websites with clean design and smooth animations. Passionate about minimalism and elegant user interfaces.</p>
+      <div class="wrapper">
+        <h2>About Me</h2>
+        <p>
+          I build modern, responsive websites with clean design and smooth animations. 
+          Passionate about minimalism and elegant user interfaces.
+        </p>
+      </div>
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="card">
-          <h3>Project One</h3>
-          <p>Modern landing page with animations.</p>
-        </div>
-        <div class="card">
-          <h3>Project Two</h3>
-          <p>Dark theme portfolio concept.</p>
-        </div>
-        <div class="card">
-          <h3>Project Three</h3>
-          <p>Creative UI experiment.</p>
+      <div class="wrapper">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          
+          <div class="card">
+            <h3>Project One</h3>
+            <p>Modern landing page with animations.</p>
+          </div>
+
+          <div class="card">
+            <h3>Project Two</h3>
+            <p>Dark theme portfolio concept.</p>
+          </div>
+
+          <div class="card">
+            <h3>Project Three</h3>
+            <p>Creative UI experiment.</p>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
-      <h2>Contact</h2>
-      <p>Let's build something amazing together.</p>
-      <a href="mailto:tu-correo@ejemplo.com" class="btn outline">Send Message</a>
+    <section id="contact" class="section">
+      <div class="wrapper">
+        <h2>Contact</h2>
+        <p>Let's build something amazing together.</p>
+        <a href="mailto:tu-email@ejemplo.com" class="btn-outline">Send Message</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Riberi Erik. All rights reserved.</p>
+    <div class="wrapper">
+      <p>© 2026 Riberi Erik. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Efecto de tipeo
+      // 1. Efecto de Escritura (Typed Effect)
       const text = "Riberi Erik";
       let index = 0;
+      const typedElement = document.getElementById("typed");
+
       function typeEffect() {
         if (index < text.length) {
-          document.getElementById("typed").innerHTML += text.charAt(index);
+          typedElement.innerHTML += text.charAt(index);
           index++;
           setTimeout(typeEffect, 150);
         }
       }
       typeEffect();
 
-      // Partículas
+      // 2. Configuración de Partículas
       tsParticles.load("particles-js", {
-        fullScreen: { enable: true, zIndex: -1 }, // Esto asegura que esté al fondo
+        fpsLimit: 60,
         particles: {
-          number: { value: 80 },
-          color: { value: "#ffffff" },
-          links: { enable: true, color: "#ffffff", opacity: 0.2 },
-          move: { enable: true, speed: 1 }
+          number: { value: 60 },
+          color: { value: "#38bdf8" }, // Color celeste que combina con el CSS
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#38bdf8",
+            opacity: 0.2,
+            width: 1
+          },
+          move: { enable: true, speed: 1.5 },
+          size: { value: 2 }
         }
       });
     });
   </script>
+
 </body>
 </html>
