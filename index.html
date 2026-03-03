@@ -1,85 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADAMA C3</title>
-    <link rel="icon" href="./images/log-removebg-preview.ico">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riberi Erik</title>
+  <link rel="icon" href="./images/log-removebg-preview.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <div class="header">
-      <div class="cuad">
-        <div class="left">ADAMA C3 </div>
-          <ul class="right-links">
-            <li><a href="#">header link one</a></li>
-            <li><a href="#">header link two</a></li>
-            <li><a href="#">header link three</a></li>
-          </ul>
-        </div>
-      </div>
+<body>
 
-    <div class="contai">
-      <div class="recuadro">
-        <div class="left">
-          <div class="Titulo">This website is awesome</div>
-          <div class="Tex">It's a long long long sentence that I don't know what to put here, that's why I put this to test that everything works ok, everything ok? everything O.K.</div>
-          <button class="Sing">Sing up</button>
-        </div>
-      </div>    
-      <div class="recuadro">
-        <div class="right">
-          <img src="./images/austria.jpg" alt="austria" >
-          <p>Image by <a href="https://pixabay.com/users/chriszwettler-23331959/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6934184">chriszwettler</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6934184">Pixabay</a></p>
-        </div>
-      </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="wrapper">
+      <div class="logo">Riberi Erik</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero wrapper">
+    <div class="hero-text">
+      <h1>This website is awesome</h1>
+      <p>
+        This is a longer description to demonstrate how the layout works.
+        Everything is styled properly and aligned correctly.
+      </p>
+      <button>Sign Up</button>
     </div>
 
-    <div class="container">
-      <div class="title">Some random imformation</div>
-      <div class="containertwo">
-        <div class="info">
-          <img src="./images/ajedrez.jpg" alt="chess">   
-          <div class="text">This is some subtext under an illustration or image</div>
-        </div>
-        <div class="info">
-          <img src="./images/naipes.jpg" alt="naipes">
-          <div class="text">This is some subtext under an illustration or image</div>
-        </div>
-        <div class="info">
-          <img src="./images/biblioteca.jpg" alt="library">
-          <div class="text">This is some subtext under an illustration or image</div>
-        </div>
-        <div class="info">
-          <img src="./images/porsche.jpg" alt="porsche">
-          <div class="text">This is some subtext under an illustration or image</div>
-        </div>
+    <div class="hero-image">
+      <img src="./images/austria.jpg" alt="Austria landscape">
+      <p class="credit">
+        Image by <a href="#">chriszwettler</a> from <a href="#">Pixabay</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="info-section">
+    <h2>Some Random Information</h2>
+
+    <div class="cards wrapper">
+      <div class="card">
+        <img src="./images/ajedrez.jpg" alt="Chess">
+        <p>Some subtext under an illustration or image.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/naipes.jpg" alt="Cards">
+        <p>Some subtext under an illustration or image.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/biblioteca.jpg" alt="Library">
+        <p>Some subtext under an illustration or image.</p>
+      </div>
+
+      <div class="card">
+        <img src="./images/porsche.jpg" alt="Porsche">
+        <p>Some subtext under an illustration or image.</p>
       </div>
     </div>
+  </section>
 
-    <div class="inspir">
-        <div class="inspirtwo">
-          <div class="text">Act, don't react</div>
-          <div class="subtext">-Dr. Alberto Martí Bosch</div>
+  <!-- Quote Section -->
+  <section class="quote">
+    <div class="wrapper">
+      <blockquote>
+        “Act, don’t react.”
+      </blockquote>
+      <p class="author">– Dr. Alberto Martí Bosch</p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="wrapper cta-box">
+      <div>
+        <h3>Call to action! It’s time!</h3>
+        <p>Sign up for our product by clicking the button right over there.</p>
       </div>
+      <button class="outline">Sign Up</button>
     </div>
+  </section>
 
-    <div class="ult">
-        <div class="cuadr">
-            <div class="text">
-                <div class="c2">Call to action! It's time!</div>
-                <div class="c6">Sing up for our product by clicking that buttom right over there!></div></div>
-            <button class="ns">Sing Up</button>
-        </div>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>Copyright © Riberi Erik 2026</p>
+  </footer>
 
-    <div class="footer">
-      <div class="text">
-      Copyright © The Odin Project 2021
-      </div>
-    </div>
-    
-  </body>
+</body>
 </html>
