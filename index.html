@@ -9,10 +9,6 @@
 
 <body>
 
-  <h1 style="color:white; position:relative; z-index:5;">
-TEST
-</h1>
-
   <!-- Particles Background -->
   <div id="particles-js"></div>
 
@@ -20,7 +16,7 @@ TEST
   <header class="header">
     <div class="logo">Riberi Erik</div>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -77,49 +73,46 @@ TEST
     <p>© 2026 Riberi Erik. All rights reserved.</p>
   </footer>
 
-  <!-- Typing Effect Script -->
+  <!-- Typing Effect -->
   <script>
-    const text = "Riberi Erik";
-    let index = 0;
+    document.addEventListener("DOMContentLoaded", function () {
+      const text = "Riberi Erik";
+      let index = 0;
 
-    function typeEffect() {
-      if (index < text.length) {
-        document.getElementById("typed").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100);
-      }
-    }
-
-    typeEffect();
-  </script>
-
-  <!-- Particles Library -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
-  <!-- Particles Config -->
-  <script>
-    tsParticles.load("particles-js", {
-      background: {
-        color: "#0f1a17"
-      },
-      particles: {
-        number: { value: 80 },
-        color: { value: "#9be3c6" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 3 },
-        move: {
-          enable: true,
-          speed: 1
-        },
-        links: {
-          enable: true,
-          distance: 150,
-          color: "#9be3c6",
-          opacity: 0.4,
-          width: 1
+      function typeEffect() {
+        if (index < text.length) {
+          document.getElementById("typed").innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeEffect, 100);
         }
       }
+
+      typeEffect();
+    });
+  </script>
+
+  <!-- Particles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      tsParticles.load("particles-js", {
+        background: { color: "#0f1a17" },
+        particles: {
+          number: { value: 70 },
+          color: { value: "#9be3c6" },
+          shape: { type: "circle" },
+          opacity: { value: 0.4 },
+          size: { value: 3 },
+          move: { enable: true, speed: 1 },
+          links: {
+            enable: true,
+            distance: 140,
+            color: "#9be3c6",
+            opacity: 0.3,
+            width: 1
+          }
+        }
+      });
     });
   </script>
 
